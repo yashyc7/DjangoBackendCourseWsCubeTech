@@ -4,7 +4,8 @@ from django.contrib import admin
 
 from service.models import Service
 
-class Service_admin(admin.ModelAdmin):
+class ServiceAdmin(admin.ModelAdmin):
     list_display=('service_icon','service_title','service_des')
+admin.site.register(Service,ServiceAdmin)
 
-admin.site.register(Service,Service_admin)
+
