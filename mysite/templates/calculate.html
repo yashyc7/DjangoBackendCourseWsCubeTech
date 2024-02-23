@@ -1,0 +1,45 @@
+{% include "header.html" %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 style="text-align: center; color: black; font-weight: bold; font-family: monospace;">CALCULATOR</h1>
+
+<form method="POST">
+    {% csrf_token %}
+   <label for="num1"> value 1</label>
+   <input type="text" name="num1" class='form-control'>
+  <br>
+   <label for="num2"> value 1</label>
+   <input type="text" name="num2" class='form-control'>
+   <button type="submit"> calculate</button>
+  
+   <br>
+   <br>
+   <label>additon:</label>
+   <input type="text" value={{add}} >
+   <br>
+   <br> 
+    <label>subtraction:</label>
+   <input type="text" value={{sub}}>
+   <br>
+   <br>
+   <label >multiplication:</label>
+   <input type="text" value={{mul}}>
+   <br>
+   <br>
+   <label >division</label>
+   <input type="text" value={{div}}>
+   <button type="reset">reset all values </button>
+   <br><br>
+</form>
+
+
+
+
+
+
+{% include "footer.html" %}

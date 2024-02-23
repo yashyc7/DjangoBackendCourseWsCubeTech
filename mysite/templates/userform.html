@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+
+{% block content  %}
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form method="POST" action="{% url "submitform" %}">
+<label for="num1">first value</label>
+<input type="text" name="num1" class="form-control">
+<br>
+<br>
+{% csrf_token %}
+<label for="num2">second value</label>
+<input type="text" name="num2" class="form-control">
+<br> 
+
+<br>
+<button type="submit">Add these numbers </button>
+<input type="text" value="{{output}}">
+</form>
+{% endblock content  %}
