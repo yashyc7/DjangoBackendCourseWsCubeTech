@@ -7,9 +7,9 @@
 <br>
 <br>
 
-<marquee>
+<marquee onmouseover="stop()" onmouseout="start()">
 {% for n in newsdata %}
-<a href="/about">  {{n.title}}</a>
+<a href="/newsdetail/{{n.id}}">  {{n.title|upper}}</a>
 {% endfor %}
 </marquee>
 

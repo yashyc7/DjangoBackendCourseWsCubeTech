@@ -116,3 +116,9 @@ def marksheet(request):
                }       
          return render(request,'marksheet.html',data)
      return render(request,'marksheet.html',data)
+
+
+def newsdetail(request,newsid):
+   print(newsid)
+   newsdata=News.objects.get(id=newsid)
+   return render(request,"newsdetail.html",{'newsdata':newsdata})
