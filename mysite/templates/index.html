@@ -331,18 +331,18 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row">
-                {% for n in servicesData %}
+                {% for n in newsdata %}
                 <div class="col-md-11 col-lg-10 mx-auto">
                   <div class="box">
-                    <div class="{{n.service_icon}}">
+                    <div class="{{n.icon}}">
                       <img src="/static/images/client.jpg" alt="" />
                     </div>
                     <div class="detail-box">
                       <div class="name">
-                        <h6>{{n.service_title}}</h6>
+                        <h6>{{n.title|safe}}</h6>
                       </div>
                       <p>
-                      {{n.service_des}}
+                      {{n.description|safe}}
                       </p>
                       <i class="fa fa-quote-left" aria-hidden="true"></i>
                     </div>

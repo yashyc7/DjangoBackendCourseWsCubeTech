@@ -1,14 +1,17 @@
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from service.models import Service
-
+from news.models import News
 from .forms import UsersForm
 
 
 def index(request):
     servicesData=Service.objects.all()
+    newsdata=News.objects.all()
     #sending the data from the table to the website using data dictionaries.
-    data={'servicesData':servicesData}
+    data={'servicesData':servicesData,
+          'newsdata':newsdata}
     return render(request, "index.html",data)
 
 
