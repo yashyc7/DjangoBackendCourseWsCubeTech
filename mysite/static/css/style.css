@@ -964,3 +964,11 @@ a:focus {
   color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
+
+marquee{
+color: white;
+background-color:rgb(126, 99, 243);
+line-height: 50;
+position:relative;
+z-index: 999;
+}

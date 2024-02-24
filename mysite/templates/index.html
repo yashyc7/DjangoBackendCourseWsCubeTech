@@ -1,5 +1,17 @@
 
 {% include "header.html" %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<marquee>
+{% for n in newsdata %}
+<a href="/about">  {{n.title}}</a>
+{% endfor %}
+</marquee>
 
     <!-- slider section -->
     <section class="slider_section position-relative">
